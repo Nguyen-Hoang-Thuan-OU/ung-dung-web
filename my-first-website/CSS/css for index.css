@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS for my website */
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: lightgray;
+}
+
+#main
+{
+	margin: 0 auto;
+	width: 80%;
+}
+
+#banner
+{
+	height: 100px;
+	line-height: 100px;
+	background-color: darkblue;
+	color: whitesmoke;
+	font-size: 250%;
+	font-weight: bolder;
+	text-align: center;
+	border-radius: 8px;
+}
+
+#nav
+{
+	height: 40px;
+	line-height: 40px;
+	background-color: mediumblue;
+	color: ghostwhite;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#menu li
+{
+	display: inline-table;
+	position: relative;
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#menu li a
+{
+	display: block;
+	background-color: mediumblue;
+	color: white;
+	text-decoration: none;
+}
+
+#menu li a:hover
+{
+	background-color: ghostwhite;
+	color: mediumblue;
+	position: relative;
+	transition: 0.5s;
+}
+
+#menu li #submenu
+{
+	display: none;
+}
+
+#menu li:hover #submenu
+{
+	display: block;
+	position: absolute;
+	padding: 5px;
+	transition: 0.5s;
+}
+
+#left
+{
+	float: left;
+	width: 30%;
+	min-height: 600px;
+	background-color: lightyellow;
+	color: deeppink;
+}
+
+#left ul li
+{
+	display: block;
+}
+
+#left ul li a
+{
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#left ul li a:hover
+{
+	color: hotpink;
+	font-size: 110%;
+	transition: 0.5s;
+}
+
+#detail
+{
+	float: left;
+	width: 70%;
+	background-color: antiquewhite;
+	color: darkgreen;
+	min-height: 600px;
+	text-align: justify;
+}
+
+#footer
+{
+	clear: both;
+	height: 50px;
+	line-height: 25px;
+	text-align: center;
+	background-color: darkblue;
+	color: whitesmoke;
+	font-size: 120%;
+	font-weight: bolder;
+}
