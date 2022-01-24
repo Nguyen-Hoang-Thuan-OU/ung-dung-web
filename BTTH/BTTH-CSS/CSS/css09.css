@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS 09 */
+header
+{
+	font-size:200%;
+	font-weight:bolder;
+	color:brown;
+}
+
+hr
+{
+	color:blue;
+	border-width:5px;
+}
+
+h2, p
+{
+	color:black;
+}
+
+p
+{
+	text-align:justify;
+	line-height:20px;
+}
+
+.coffee
+{
+	float:right;
+	width:320px;
+	240px;
+}
+
+nav
+{
+	background-color:lightyellow;
+	text-align:left;
+	padding:15px;
+}
+
+a
+{
+	color:purple;
+	font-size:120%;
+	text-decoration:none;
+	margin-right:20px;
+}
+
+a:hover
+{
+	color:red;
+	font-size:150%;
+	font-weight:700px;
+}	

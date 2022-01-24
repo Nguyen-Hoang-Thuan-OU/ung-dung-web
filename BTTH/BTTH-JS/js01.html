@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 01</title>
+	<script>
+	function tinhTuoi()
+	{
+		var ten = document.getElementById("txtTen").value;
+		var namsinh = parseInt (document.getElementById("txtNamsinh").value);
+		var namhientai = new Date().getFullYear();
+		document.getElementById("ketqua").innerHTML="Chào bạn " + ten + "!" + "<br>Tuổi của bạn là " + (namhientai-namsinh);
+	}
+	</script>
+	
+	<style>
+		table, th, td
+		{
+			border:1px solid black;
+		}
+		
+		table
+		{
+			width:40%;
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+	<caption>CHƯƠNG TRÌNH TÍNH TUỔI</caption>
+		<tr>
+			<td>Nhập vào tên của bạn:</td>
+			<td><input type="text" id="txtTen" placeholder="Nhập tên (VD: Thành)"></td>
+		</tr>
+		
+		<tr>
+			<td>Nhập vào năm sinh của bạn</td>
+			<td><input type="text" id="txtNamsinh" placeholder="Nhập năm sinh (VD: 2000)"></td>
+		</tr> 
+	</table>
+	<br><button onClick="tinhTuoi()">Tính tuổi</button>
+	<p id="ketqua"></p>
+<p align="center"><a href="http://www.nguyenhoangthuan.somee.com/">Quay về trang chủ</a></p>
+</body>
+</html>

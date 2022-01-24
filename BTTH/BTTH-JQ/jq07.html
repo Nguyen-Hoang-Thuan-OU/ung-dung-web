@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 07</title>
+	
+	<style>
+		#container
+		{
+			padding:20px
+		}
+		
+		.pannels, .pannels a, .pannels li
+		{
+			height: 200px;
+			overflow: hidden;
+		}
+		
+		.pannels
+		{
+			background: #ddd;
+			margin: 0 0 20px;
+			position: relative;
+			width: 900px;
+		}
+		
+		.pannels li
+		{
+			float: left;
+			font-size: 100px;
+			line-height: 200px;
+			list-style: none;
+			text-align: center;
+			width:180px;
+		}
+
+		.pannels li.last, .pannels li:last-child
+		{
+			border: 0;
+			float:none;
+			position:absolute;
+			top: 0;
+			right: 0;
+		}
+		.pannels a
+		{
+			background: url("/Images/radial.png") no-repeat 0 200px;
+			color: #666;
+			display: block;
+			text-decoration: none;
+			width: 100%;
+		}
+		.pannels a:hover
+		{
+			background-color: #bbb;
+			background-position: center top;
+			color: #000;
+			font-weight: bold;
+			text-shadow: #fff 0 5px 5px;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script>
+		var speed = 200;
+		$('ul.pannels li:last-child').addClass('last');
+
+		$('ul.pannels li').hover(function()
+		{
+			$(this).stop().animate(
+			{
+				width:'360px',
+				fontSize:'50px'
+			}, speed);
+		},
+		function()
+		{
+			$(this).stop().animate(
+			{
+				width: '180px',
+				fontSize: '100px'
+			}, speed);
+		}
+		);
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<ul class="pannels">
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+		</ul>
+	</div>
+</body>
+</html>

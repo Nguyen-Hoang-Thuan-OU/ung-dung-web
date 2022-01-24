@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 11</title>
+	
+	<script>
+		function thayThe()
+		{
+			var goc = document.getElementById("chuoiGoc").value;
+			var biThay = document.getElementById("chuoiBiThay").value;
+			var Thay = document.getElementById("chuoiThayThe").value;
+			
+			var index = goc.indexOf(biThay);
+			while(index >= 0)
+				{
+					goc = goc.replace(biThay, Thay);
+					index = goc.indexOf(biThay);
+				}
+			document.getElementById("chuoiGoc").value = goc;
+		}
+	</script>
+</head>
+
+<body>
+	<table>
+		<caption>THAY THẾ CHUỖI</caption>
+		
+		<tr>
+			<td>Chuỗi ban đầu: </td>
+			<td><input type="text" id="chuoiGoc" value="XYZABCDEFGABCDKML" size="50" /></td>
+		</tr>
+		
+		<tr>
+			<td>Chuỗi bị thay thế: </td>
+			<td><input type="text" id="chuoiBiThay" value="ABCD" size="50" /></td>
+		</tr>
+		
+		<tr>
+			<td>Chuỗi thay thế: </td>
+			<td><input type="text" id="chuoiThayThe" value="1234" size="50" /></td>
+		</tr>
+		
+		<tr>
+			<td colspan="2"><button onClick="thayThe()">Thực hiện</button></td>
+		</tr>
+	</table>
+</body>
+</html>

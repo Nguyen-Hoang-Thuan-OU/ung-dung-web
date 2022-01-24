@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 13</title>
+    
+    <script>
+		function Statistic()
+		{
+			var s1 = document.getElementById("chuoi").value;
+			var arr = s1.split(" ");
+			var i, words = 0;
+			var arrKq = [];
+			for (i = 0; i < arr.length; i++)
+			{
+				if (arr[i].trim() != "")
+					words ++;
+			}
+			
+			var kq = "Số ký tự: " + s1.length + "<br>" +
+					 "Số từ: " + words + "<br>";
+					 
+			for (i = 0; i < s1.length; i++)
+			{
+				if (s1.charCodeAt(i) >= 97 && s1.charCodeAt(i) <= 122)
+				{
+					if (!isNaN (arrKq[s1.charCodeAt(i)-32]))
+						arrKq[s1.charCodeAt(i)-32] ++;
+					else
+						arrKq[s1.charCodeAt(i)-32] = 1;
+				}
+				
+				else
+				{
+					if (!isNaN(arrKq[s1.charCodeAt(i)]))
+						arrKq[s1.charCodeAt(i)] ++;
+					else
+						arrKq[s1.charCodeAt(i)] = 1;
+				}
+			}
+			
+			for (i = 0; i < arrKq.length; i++)
+			{
+				if (!isNaN(arrKq[i]))
+					kq = kq + "Ký tự ' " + String.fromCharCode(i) + " ': " + arrKq[i] + "<br>";
+			}
+			document.getElementById("ket-qua").innerHTML = kq;
+		}
+	</script>
+</head>
+
+<body>
+	<table>
+    	<caption><h3>Phân tích chuỗi</h3></caption>
+        <tr>
+        	<td>Chuỗi: </td>
+            <td><input type="text" id="chuoi" size=50 value="Hello, how are you? 696969123132"></td>
+        </tr>
+        
+        <tr>
+        	<td></td>
+            <td><button onClick="Statistic()">Phân tích</button></td>
+        </tr>
+        
+        <tr>
+        	<td></td>
+            <td><p id="ket-qua"></p></td>
+        </tr>
+    </table>
+</body>
+</html>

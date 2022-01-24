@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS 03 */
+body
+{
+	color:black;
+	background-color:white;
+	font-size:12px;
+	font-family:arial, verdana, sans-serif;
+}
+
+p
+{
+	padding:10px;
+}
+
+p[id]
+{
+	border:1px solid black;
+}
+
+p[id="summary"]
+{
+	background-color:yellow;
+}
+
+p[class~="XHTML"]
+{
+	border:5px solid black;
+}
+
+p[language|="en"]
+{
+	color:rgb(255,255,255);
+	background-color:rgb(0,0,0);
+}
+
+p[class^="b"]
+{
+	border:3px solid black;
+	color:#ff00ff;
+}
+
+p[class$="x"]
+{
+	border:1px solid black;
+	color:red;
+}
+
+p[class*="in"]
+{
+	background-color:cyan;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 05</title>
+	
+	<style>
+		table, td
+		{
+			padding:25px;
+			border-style:solid;
+			border-width:1px;
+			border-collapse:collapse;
+			background-color:lightgray;
+		}
+		
+		th
+		{
+			color:blue;
+		}
+		
+		caption
+		{
+			font-size:200%
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		var hang, cot, i = 2, j;
+		var html = "<table><caption>BẢNG CỬU CHƯƠNG</caption>";
+		for (hang = 1; hang <= 2; hang++)
+		{
+			html = html + "<tr>";
+			for (cot = 1; cot <= 4; cot ++)
+			{
+				html = html + "<td>";
+				for (j = 2; j <= 9; j++)
+				{
+					html = html + (i + " * " +j) + " = " + i*j + "<br>";
+				}
+				i++;
+				html = html + "</td>";
+			}
+			html = html + "</tr>";
+		}
+		html = html + "<table>";
+		document.write (html);
+	</script>
+<p align="center"><a href="http://www.nguyenhoangthuan.somee.com/">Quay về trang chủ</a></p>
+</body>
+</html>

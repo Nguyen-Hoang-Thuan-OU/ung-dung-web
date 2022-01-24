@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 14</title>
+    
+    <style>
+		#khung
+		{
+			width:300px;
+			height:200px;
+			background-color:gray;
+		}
+	</style>
+    
+    <script>
+		function doiMau()
+		{
+			var mau = document.getElementById("mauNen").value;
+			document.getElementById("gt").innerHTML = "Giá trị màu được chon là: " + mau;
+			document.getElementById("khung").style.backgroundColor = mau;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="khung"></div>
+    <input type="color" id="mauNen" value="gray" />
+    <input type="button" onClick="doiMau()" value="Đổi màu" />
+    <p id = "gt"></p>
+</body>
+</html>

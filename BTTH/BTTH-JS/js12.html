@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 12</title>
+<script>
+	function daoChuoi()
+	{
+		var str = document.getElementById("txtText").value;
+		arr = str.split(" ");
+		var i, kq = "";
+		for(i = arr.length - 1; i >= 0; i--)
+		{
+			kq = kq + arr[i] + " ";
+		}
+		document.getElementById("txtText").value = kq.trim();
+	}
+	
+	function chuanHoa()
+	{
+		var str = document.getElementById("txtText").value;
+		arr = str.split(" ");
+		var i, kq = "";
+		for(i = 0; i < arr.length; i++)
+		{
+			var tmp = arr[i].toLowerCase();
+			if(tmp.trim() != "")
+				kq += tmp.substr(0, 1).toUpperCase() + tmp.substr(1) + " ";
+		}
+		document.getElementById("txtText").value = kq.trim();
+	}
+</script>
+</head>
+<body>
+<table>
+	<caption><b>Xử lí chuỗi</b></caption>
+        <tr>
+        	<td>Chuổi ban đầu</td>
+            <td><input type="text" id="txtText"></td>
+        </tr>
+        
+        <tr>
+        	<td><button onClick="daoChuoi()">Đảo chuỗi</button></td>
+        	<td><button onClick="chuanHoa()">Chuẩn hóa chuỗi</button></td>
+        </tr>
+</table>
+</body>
+</html>

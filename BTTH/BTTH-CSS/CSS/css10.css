@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS 10 */
+header
+{
+	font-size:200%;
+	font-weight:bolder;
+	color:green;
+}
+
+p
+{
+	text-align:justify;
+	line-height:20px;
+}
+
+nav
+{
+	background-color:lightblue;
+	text-align:left;
+	padding:15px;
+}
+
+a
+{
+	color:red;
+	font-size:120%;
+	text-decoration:none;
+	margin-right:20px;
+}
+
+a:hover
+{
+	color:blue;
+	font-size:150%;
+	font-weight:700px;
+}
+
+b
+{
+	color:green;
+}
+
+.cunghoclaptrinh
+{
+	color:green;
+	text-shadow:5px 5px 5px;
+}
+
+.dangnhap
+{
+	float:right;
+	margin:0 20px;
+}
+
+.dangky
+{
+	color:red;
+	background-color:lightblue;
+}
+
+.dangky:hover
+{
+	color:blue;
+	font-size:150%;
+	font-weight:700px;
+}

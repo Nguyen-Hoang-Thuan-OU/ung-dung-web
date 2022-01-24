@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form đăng nhập</title>
+</head>
+
+<body>
+	<form action="">
+		<table border="1">
+			<tr>
+				<td>Họ tên</td>
+				<td><input type="text" placeholder="Nhập họ tên ở đây" id="txtTen"></td>
+			</tr>
+			
+			<tr>
+				<td>Giới tính</td>
+					<td>
+						<input type="radio" name="gioitinh" value="nam" checked>Nam
+						<input type="radio" name="gioitinh" value="nu">Nữ
+					</td>
+			</tr>
+			
+			<tr>
+				<td>Điều bạn quan tâm</td>
+					<td>
+						<input type="checkbox" name="quantam" value="kinhte" checked>Kinh tế
+						<input type="checkbox" name="quantam" value="xahoi" checked>Xã hội
+						<input type="checkbox" name="quantam" value="gioitri">Giải trí
+					</td>
+			</tr>
+			
+			<tr>
+				<td>Địa chỉ</td>
+				<td><textarea name="diachi" cols="40" row="4"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td>Học vấn</td>
+				<td>
+					<select name="hocvan">
+						<option value="Đại học" selected>Đại học</option>
+						<option value="Cao đẳng">Cao đẳng</option>
+						<option value="Trung cấp">Trung cấp</option>
+						<option value="THPT">THPT</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Gửi thông tin">
+					<input type="reset" value="Nhập lại">
+				</td>
+			</tr>
+		</table>
+	</form>
+<p align="center"><a href="http://www.nguyenhoangthuan.somee.com/">Quay về trang chủ</a></p>
+</body>
+</html>

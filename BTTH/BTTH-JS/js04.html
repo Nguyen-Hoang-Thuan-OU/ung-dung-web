@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 04</title>
+	
+	<style>
+		p
+		{
+			font-size:300%;
+		}
+	</style>
+
+	<script>
+		function xoay()
+		{
+			var str = document.getElementById("phaiSangTrai").innerHTML;
+			str = str.substr(1, str.length - 1) + str.substr(0, 1);
+			document.getElementById("phaiSangTrai").innerHTML = str;
+			
+			str = document.getElementById("traiSangPhai").innerHTML;
+			str = str.substr(str.length - 1) + str.substr(0, str.length - 1);
+			document.getElementById("traiSangPhai").innerHTML = str;
+		}
+	</script>
+</head>
+
+<body>
+	<p id="phaiSangTrai">HTML - CSS - JAVASCRIPT</p>
+	<p id="traiSangPhai">HTML - CSS - JAVASCRIPT</p>
+	<script>
+		setInterval(xoay, 300);
+	</script>
+<p align="center"><a href="http://www.nguyenhoangthuan.somee.com/">Quay về trang chủ</a></p>
+</body>
+</html>

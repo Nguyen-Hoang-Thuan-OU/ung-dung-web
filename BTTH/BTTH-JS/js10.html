@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 10</title>
+	
+	<script>
+		function taoMang()
+		{
+			var i;
+			var n = parseInt(document.getElementById("soPhanTu").value);
+			arr = new Array(n); //Tạo n phần tử
+			for (i = 0; i < n; i++)
+			{
+				arr [i] = Math.floor(Math.random()*100)%50;
+			}
+			document.getElementById("txtMang1").value = arr.join(" ");
+		}
+		
+		function mangTang()
+		{
+			arr.sort(function(a, b) {return a - b});
+			document.getElementById("txtMang2").value = arr.join(" ");
+		}
+		
+		function mangGiam()
+		{
+			arr.sort(function(a, b) {return b - a});
+			document.getElementById("txtMang3").value = arr.join(" ");
+		}
+	</script>
+</head>
+
+<body>
+	<label for="soPhanTu">Nhập số lượng phần tử</label>
+	<input type="number" id="soPhanTu" value="10" size="10">
+	<br>
+	
+	<button onclick="taoMang()">Tạo mảng</button>
+	<button onclick="mangTang()">Sắp xếp mảng tăng</button>
+	<button onclick="mangGiam()">Sắp xếp mảng giảm</button>
+	<br>
+	
+	<label for="txtMang1">Mảng ban đầu</label>
+	<input type="text" id="txtMang1" size="50">
+	<br>
+	
+	<label for="txtMang2">Mảng tăng dần</label>
+	<input type="text" id="txtMang2" size="50">
+	<br>
+	
+	<label for="txtMang3">Mảng giảm dần</label>
+	<input type="text" id="txtMang3" size="50">
+</body>
+</html>

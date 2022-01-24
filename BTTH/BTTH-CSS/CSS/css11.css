@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS 11 */
+#main
+{
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top:50px;
+}
+
+#banner
+{
+	height:80px;
+	background-color: lightblue;
+	background-image:url(Images/backgrd.png);
+	font-size:200%;
+	color:yellow;
+	font-weight:1000;
+	text-shadow: 6px 6px 3px gray;
+	text-align:center;
+	padding-top:30px;
+}
+
+#nav
+{
+	height:30px;
+	background-color: cyan;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	text-align:center;
+}
+
+#left
+{
+	float:left;
+	width:15%;
+	background-color: lightyellow;
+	min-height:500px;
+}
+#right
+{
+	float:right;
+	width:15%;
+	background-color: lightyellow;
+	min-height:500px;
+}
+
+#footer
+{
+	clear:both;
+	height:50px;
+	background-color: lightblue;
+}
+
+#detail
+{
+	min-height:500px;
+}
+
+#menu li
+{
+	display:inline-block;
+	background-color: green;
+	line-height:20px;
+	position:relative;
+	witdh:100px;
+	height:25px;
+	border:1px dotted white;
+}
+
+#menu li #submenu
+{
+	display:none;
+}
+
+a
+{
+	text-decoration: none;
+	color:white;
+}
+
+a:hover
+{
+	color:yellow;
+	font-size:120%;
+}
+
+#menu li:hover #submenu
+{
+	display:block;
+	position:absolute;
+	margin:0px;
+	padding:0px;
+}
+
+.ad
+{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:30px;
+	border:1px solid orange;
+	border-radius:25px;
+	box-shadow:6px 6px gray;
+	height:100px;
+	background-color:yellow;
+}
+
+.a, .b, .c, .d
+{
+	border:1px solid orange;
+	height:100px;
+	background-color:lightgray;
+	height:240px;
+	width:30%;
+	float:left;
+	margin-left:20px;
+}

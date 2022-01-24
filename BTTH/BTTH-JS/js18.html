@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 18</title>
+    
+    <style>
+		.large
+		{
+			width:243px;
+			height:217px;
+		}
+		
+		.medium
+		{
+			width:121px;
+			height:108px;
+		}
+		
+		.small
+		{
+			width:48px;
+			height:43px;
+		}
+		
+		.original
+		{
+			width:486px;
+			height:433px;
+		}
+	</style>
+    
+    <script>
+		function setImgSize(value)
+		{
+			document.getElementById("hinh").className = value;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Image Resizing</h1>
+    <hr />
+    <p id="scale">Scale:
+    	<input id="smallScale" type="radio" name="dieuChinh" value="small" onClick="setImgSize(this.value)" />10%
+        
+        <input id="mediumScale" type="radio" name="dieuChinh" value="medium" onClick="setImgSize(this.value)" />25%
+        
+        <input id="largeScale" type="radio" name="dieuChinh" value="large" onClick="setImgSize(this.value)" />50%
+        
+        <input id="originalScale" type="radio" name="dieuChinh" value="original" onClick="setImgSize(this.value)" checked />100%
+    </p>
+    <img id="hinh" class="originalScale" src="/Images/coffee.png" />
+</body>
+</html>

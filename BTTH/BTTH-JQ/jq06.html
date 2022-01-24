@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 06</title>
+	
+	<style>
+		#myFrame
+		{
+			left:0;
+			top:0;
+			position:relative;
+			width:200px;
+			height:100px;
+			border:1px solid black;
+			background-color:lightgray;
+		}
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script>
+		$().ready(function(e)
+		{
+			$('#sangPhai').click(function()
+			{
+				var left = window.innerWidth - 202;
+				$('#myFrame').animate(
+				{
+					'left': left
+				}, 1000
+				);
+			}
+			);
+			
+			$('#sangTrai').click(function()
+			{
+				$('#myFrame').animate(
+				{
+					'left': '0'
+				}, 1000
+				);
+			}
+			);
+			
+			$('#diLen').click(function()
+			{
+				$('#myFrame').animate(
+				{
+					'top': '0'
+				}, 1000
+				);
+			}
+			);
+			
+			$('#diXuong').click(function()
+			{
+				var top = window.innerHeight - 102;
+				$('#myFrame').animate(
+				{
+					'top': top
+				}, 1000
+				);
+			}
+			);
+		}
+		);
+	</script>
+</head>
+	
+<body>
+	<div id="myFrame"></div>
+	
+	<input type="button" id="sangPhai" value="Sang Phải">
+	<input type="button" id="sangTrai" value="Sang Trái">
+	<input type="button" id="diLen" value="Đi Lên">
+	<input type="button" id="diXuong" value="Đi Xuống">
+</body>
+</html>

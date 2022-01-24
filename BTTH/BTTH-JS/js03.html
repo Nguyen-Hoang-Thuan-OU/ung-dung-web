@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 03</title>
+	
+	<script>
+		function tinhToan()
+		{
+			var soThu1 = parseInt(document.forms.myForm["txtSoThu1"].value)
+			var soThu2 = parseInt(document.forms.myForm["txtSoThu2"].value)
+			var luaChon = document.forms.myForm["luaChon"].value;
+			var ketQua = 0;
+			
+			switch(luaChon)
+			{
+				case "+": ketQua = soThu1 + soThu2;
+				break;
+				
+				case "-": ketQua = soThu1 - soThu2;
+				break;
+				
+				case "*": ketQua = soThu1 * soThu2;
+				break;
+				
+				case "/":
+					if (soThu2 != 0)
+					{
+						var x = soThu1 / soThu2;
+						ketQua = x.toFixed(2);
+					}
+					else
+						kq="Không thể thực hiện phép chia cho 0"
+				break;
+			}
+			document.forms.myForm["ketQua"].value = ketQua;
+			return false;
+		}
+	</script>
+</head>
+
+<body>
+	<form id="myForm" onSubmit="return tinhToan()">
+		<table width="50%" border="1px">
+				<tr>
+					<th colspan="2"><h2>CÁC PHÉP TÍNH SỐ HỌC<h2></th>
+				</tr>
+					
+				<tr>
+					<td width="30%">Số thứ 1</th>
+					<td><input type="text" name="txtSoThu1" value="6"></td>
+				</tr>
+				
+				<tr>
+					<td width="30%">Số thứ 2</th>
+					<td><input type="text" name="txtSoThu2" value="9"></td>
+				</tr>
+				
+				<tr>
+					<td>Chọn phép toán</td>
+					<td>
+						<p>
+							<input type="radio" name="luaChon" value="+">Cộng<br>
+							<input type="radio" name="luaChon" value="-">Trừ<br>
+							<input type="radio" name="luaChon" value="*">Nhân<br>
+							<input type="radio" name="luaChon" value="/" checked>Chia<br>
+						</p>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<input type="submit" name="tinh" value="Thực hiện">
+						<input type="reset" name="xoa" value="Xóa">
+					</td>
+					<td><input type="text" name="ketQua" readonly></td>
+				</tr>
+		</table>
+	</form>
+<p align="center"><a href="http://www.nguyenhoangthuan.somee.com/">Quay về trang chủ</a></p>
+</body>
+</html>
