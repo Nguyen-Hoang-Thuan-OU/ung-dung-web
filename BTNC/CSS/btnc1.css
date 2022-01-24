@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS của vẽ bằng chuột */
+
+canvas
+{
+	border: 1px solid black;
+}
+
+fieldset
+{
+	width: 400px;
+	
+}
+
+h1
+{
+	color: darkblue;
+}

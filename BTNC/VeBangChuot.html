@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vẽ đơn giản</title>
+	
+	<link rel="stylesheet" href="CSS/btnc1.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script src="JS/btnc1.js"></script>
+</head>
+
+<body>
+		<h1>VẼ ĐƠN GIẢN</h1>
+		
+        <fieldset>
+        	<legend>Chọn bút và màu sắc</legend>
+			
+            <input type="color" id="color">
+			
+            <input type="radio" name="penwidth" id="thin" class="pen" value="thin" checked>
+            <label for="thin">Mỏng</label>
+			
+            <input type="radio" name="penwidth" id="medium" class="pen" value="medium">
+            <label for="medium">Vừa</label>
+			
+            <input type="radio" name="penwidth" id="thick" class="pen" value="thick">
+            <label for="thick">Dày</label>
+			
+            <button type="button" id="btDel">Xóa</button>
+        </fieldset>
+		
+        <canvas id="canvas" width="640" height="480"></canvas>
+</body>
+</html>

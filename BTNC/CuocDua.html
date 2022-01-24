@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cuộc đua kỳ thú</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<script src="JS/btnc3.js"></script>
+	
+	<style>
+		body
+		{
+			background-color: lightgray;
+		}
+		
+		p, div
+		{
+			text-align: center;
+		}
+		
+		h1
+		{
+			color: darkblue;
+		}
+		
+		img
+		{
+			display: block;
+			position:relative;
+			left: 0px;
+		}
+		
+		#cho
+		{
+			color: yellow;
+		}
+		
+		#rua
+		{
+			color: darkgreen;
+		}
+		
+		#tho
+		{
+			color: deeppink;
+		}
+		
+		.animal
+		{
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="cuocDua">
+		<h1>CUỘC ĐUA KỲ THÚ KHÔNG ĐIỂM DỪNG</h1>
+		<h3><b id="rua">Rùa</b> - <b id="tho">Thỏ</b> - <b id="cho">Chó</b></h3>
+	</div>
+	
+	<img class="animal" id="hinh1" src="Images/rua.png">
+	<img class="animal" id="hinh2" src="Images/tho.png">
+	<img class="animal" id="hinh3" src="Images/cho.jpg">
+	
+	<p>
+		<button id="btPlay">Đua</button>
+		<button id="btStop">Dừng</button>
+		<button id="btReset">Đua lại</button>
+	</p>
+
+</body>
+</html>
+
