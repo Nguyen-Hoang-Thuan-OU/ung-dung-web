@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 11</title>
+	
+	<script>
+		function xoa(chuoi, viTri)
+		{
+			var str = document.getElementById("chuoi").value;
+			var pos = parseInt(document.getElementById("viTri").value);
+			if(pos <= str.length && pos > 0)
+			{
+				var left = str.slice(0, pos-1);
+				var right = str.substr(pos);
+				var kq = "";
+				kq = kq.concat(left, right);
+				document.getElementById("ketQua").innerHTML="Chuỗi sau khi xóa kí tự tại vị trí " + pos + " có dạng: " + kq;
+			}
+			else
+				document.getElementById("ketQua").innerHTML="Vị trí bạn nhập không hợp lệ!";
+		}
+	</script>
+</head>
+
+<body>
+	<table border="1">
+		<caption><h2>XÓA KÍ TỰ</h2></caption>
+		<tr>
+			<td>Nhập chuỗi</td>
+			<td><input type="text" id="chuoi"></td>
+		</tr>
+		
+		<tr>
+			<td>Nhập vị trí kí tự cần xóa</td>
+			<td><input type="text" id="viTri"></td>
+		</tr>
+	</table>
+	
+	<p><button onClick="xoa(chuoi, viTri)">Thực hiện</button></p>
+	
+	<p id="ketQua"></p>
+</body>
+</html>

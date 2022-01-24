@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 17</title>
+	
+	<script>
+		function sapXep(chuoi)
+		{
+			var str = document.getElementById("chuoi").value;
+			var arr = str.split("");
+			arr.sort();
+			var kq = "";
+			for (var i = 0; i < str.length; i++)
+				kq += arr[i];
+			document.getElementById("ketQua").innerHTML= "Chuỗi sau khi sắp xếp các kí tự theo thứ tự tăng dần: " + kq;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>SẮP XẾP KÝ TỰ TRONG CHUỖI</h1>
+	<p>Nhập chuỗi: 
+		<input type="text" id="chuoi">	
+	</p>
+	<button onClick="sapXep(chuoi)">Thực hiện</button>
+	<p id="ketQua"></p>
+</body>
+</html>

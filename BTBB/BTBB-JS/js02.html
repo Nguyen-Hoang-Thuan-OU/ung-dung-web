@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 02</title>
+	
+	<script>
+		function GTLN(a, b, c)
+		{
+			var a = parseInt(document.getElementById("a").value);
+			var b = parseInt(document.getElementById("b").value);
+			var c = parseInt(document.getElementById("c").value);
+			var kq = Math.max(a, b, c);
+			document.getElementById("ketQua").innerHTML = "Số lớn nhất trong 3 số " + a + ", " + b + ", " + c + " là: " + kq;
+		}
+	</script>
+</head>
+
+<body>
+	<table border="1">
+		<caption><h1>TÌM MAX</h1></caption>
+		<tr>
+			<td>Số thứ nhất</td>
+			<td><input type="text" id="a"></td>
+		</tr>
+		
+		<tr>
+			<td>Số thứ hai</td>
+			<td><input type="text" id="b"></td>
+		</tr>
+		
+		<tr>
+			<td>Số thứ ba</td>
+			<td><input type="text" id="c"></td>
+		</tr>
+	</table>
+	
+	<p><button onClick="GTLN(a, b, c)">Kết quả</button></p>
+	
+	<p id="ketQua"></p>
+</body>
+</html>
+

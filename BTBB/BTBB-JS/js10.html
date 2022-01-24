@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 10</title>
+	
+	<script>
+		function kiemTra(tenTapTin)
+		{
+			var strFN = document.getElementById("tenTapTin").value;
+			var kq = "";
+			var check=strFN.substr(strFN.length -3);
+			if(check == "jpg" || check == "png" || check == "gif" || check == "bmp")
+				kq = "Tập tin trên là tập tin hình!";
+			else
+				kq = "Tập tin trên không phải là tập tin hình!";
+			document.getElementById("ketQua").innerHTML= kq;
+		}
+	</script>
+</head>
+
+<body>
+	<p>Nhập tệp tin: 
+		<input type="text" id="tenTapTin" required>
+	</p>
+	
+	<p><button onClick="kiemTra(tenTapTin)">Kiểm tra</button></p>
+	<p id="ketQua"></p>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 03</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<style>
+		div{
+			border:2px solid black;
+			margin-bottom: 15px;
+		}
+	</style>
+
+	
+	<script>
+		$(document).ready(function()
+		{
+			$("div.khung").css("border","none");
+		}
+		);
+	</script>
+</head>
+	
+<body>
+	<div>&lt;div&gt; chưa được xóa khung</div>
+	<div class="khung">&lt;div&gt; đã được xóa khung</div>
+</body>
+</html>

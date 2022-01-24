@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 07</title>
+	
+	<script>
+		function random100()
+		{
+			document.write("<br>Kết quả random 10 số nguyên từ 2 -> 100:   ");
+			var i, a, min = 101, max = 1;
+			for(i = 0; i < 10; i++)
+			{
+				do{
+					a = Math.floor(Math.random()*100)%99 + 2;
+				}while(a % 2 != 0);
+				if(a < min)
+					min = a;
+				if(a > max)
+					max = a;
+				document.write(a + "  ");
+			}
+			document.writeln();
+			document.writeln("Số lớn nhất trong 3 số trên: " + max);
+			document.writeln("Số nhỏ nhất trong 3 số trên: " + min);
+	}
+	</script>
+</head>
+
+<body>
+	<pre>
+	<script>
+		document.getElementsByTagName("pre").innerHTML=random100();
+	</script>
+	</pre>
+</body>
+</html>

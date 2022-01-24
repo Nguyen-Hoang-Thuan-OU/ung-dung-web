@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 03</title>
+	
+	<script>
+		function tinh(a, b, c)
+		{
+			var a = parseInt(document.getElementById("a").value);
+			var b = parseInt(document.getElementById("b").value);
+			var c = parseInt(document.getElementById("c").value);
+			var p = (a + b + c) / 2;
+			var kq;
+			
+			kq = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+			if(!isNaN(kq))
+				document.getElementById("ketqua").innerHTML= "Diện tích hình tam giác với độ dài 3 cạnh lần lượt là " + a + " " + b + " " + c + " là: " +  kq.toFixed(2);
+			else
+				document.getElementById("ketQua").innerHTML= "Độ dài ba cạnh trên không tạo thành 1 tam giác!";
+		}
+	</script>
+
+</head>
+
+<body>
+	<table border = "1">
+		<caption><h1>TÍNH DIỆN TÍCH TAM GIÁC</h1></caption>
+		<tr>
+			<td>Cạnh thứ nhất</td>
+			<td><input type="text" id="a"></td>
+		</tr>
+		
+		<tr>
+			<td>Cạnh thứ hai</td>
+			<td><input type="text" id="b"></td>
+
+		</tr>
+		
+		<tr>
+			<td>Cạnh thứ ba</td>
+			<td><input type="text" id="c"></td>
+		</tr>
+	</table>
+	
+	<br />
+	
+	<button onClick="tinh(a, b, c)">Tính</button>
+	
+	<p id="ketQua"></p>
+</body>
+</html>

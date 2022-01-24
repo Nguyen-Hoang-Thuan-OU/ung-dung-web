@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 07</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+	
+<body>
+	<p>Thêm cyan vào lựa chọn:
+		<select id="myColor">  
+			<option value="Red">Red</option>   
+			<option value="Blue">Blue</option>   
+			<option value="Green">Green</option>  
+		</select>
+	</p>
+	
+	<script>
+       $("#myColor").prepend("<option value=\"Cyan\" selected>Cyan</option>");
+    </script>
+</body>
+</html>

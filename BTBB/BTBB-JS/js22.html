@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 22</title>
+	
+	<script>
+		function Xoay()
+		{
+			var str = document.getElementById("kq").innerHTML;
+			str = str.substr(1, str.length - 1) + str.substr(0, 1);
+			document.getElementById("kq").innerHTML = str; 
+		}
+	</script>
+</head>
+
+<body>
+	<p id="mangSN"></p>
+	<p id="1"></p>
+	<p id="kq"></p>
+	
+	<script>
+		var a = "";
+		var b = "";
+		var i;
+		for(i = 0; i < 5; i++)
+			a  += Math.floor(Math.random()*100%100 + 1) + " ";
+		document.getElementById("mangSN").innerHTML = "5 số ngẫu nhiên: " + a;
+		document.getElementById("1").innerHTML = "Thực hiện xoay trái: ";
+		document.getElementById("kq").innerHTML = a;
+		setInterval(Xoay, 300);
+	</script>
+</body>
+</html>

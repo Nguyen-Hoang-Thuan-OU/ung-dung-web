@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS 09</title>
+	
+	<script>
+	    function totalEx(a,b,op) {
+		var a = parseInt(document.getElementById("a").value);
+		var b = parseInt(document.getElementById("b").value);
+		var op= document.getElementById("op").value;
+        var kq = 0;
+		switch (op)
+		{
+            case "/":
+                if (b == 0)
+					kq = "Lỗi chia 0"; 
+                else 
+					kq = (a/b).toFixed(2); 
+				break;
+            case "*":
+                kq = a*b; break;
+            case "+":
+                kq = a+b; break;
+            case "-":
+                kq = a-b; break;
+        }
+		document.getElementById("ketQua").innerHTML = a + " " + op + " " + b + " = " + kq;
+    }
+</script>
+
+</head>
+<body>
+	<table border="1">
+		<caption><h1>TÍNH TOÁN</h1></caption>
+		<tr>
+			<td>Số thứ nhất</td>
+			<td><input type="text" id="a"></td>
+		</tr>
+		
+		<tr>
+			<td>Số thứ hai</td>
+			<td><input type="text" id="b"></td>
+		</tr>
+		
+		<tr>
+			<td>Phép tính ('+', '-', '*', '/')</td>
+			<td><input type="text" id="op"></td>
+		</tr>
+	</table>
+	
+	<p><button onClick="totalEx(a, b, op)">Tính</button></p>
+	
+	<p id="ketQua"></p>
+</body>
+</html>

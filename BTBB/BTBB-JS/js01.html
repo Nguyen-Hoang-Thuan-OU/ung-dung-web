@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 01</title>
+</head>
+
+<body>
+	<p id="ketQua"></p>
+	
+	<script>
+		var a = new Date();
+		var ngay = a.getDate();
+		var thang = a .getMonth()+1;
+		var nam = a.getFullYear();
+		var gio = a.getHours();
+		var phut = a.getMinutes();
+		var giay = a.getSeconds();
+		var thoiGian = " ";
+		if (gio < 12) 
+			thoiGian = "AM"
+		else
+		{
+			gio = gio - 12;
+			thoiGian = "PM";
+		}
+		document.getElementById("ketQua").innerHTML= "Hôm nay ngày " + ngay + "/" + thang + "/"+ nam + ", " + "lúc " + gio + ":" + phut + ":" + giay +" " + thoiGian;
+	</script>
+</body>
+</html>
+

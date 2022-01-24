@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 21</title>
+	
+</head>
+
+<body>
+	<p id="daySN"></p>
+	<p id="ketqua"></p>
+	
+	<script>
+		var kq = 0;
+		var mang = "";
+		for(var i = 0; i < 10; i++)
+			{
+				var x = Math.floor(Math.random()*100) %21;
+				kq += x;
+				mang += x + "  ";
+			}
+		document.getElementById("daySN").innerHTML = "Mảng 10 số nguyên ngẫu nhiên <= 20: " + mang;
+		document.getElementById("ketqua").innerHTML = "Tổng 10 số trên: " + kq;
+	</script>
+</body>
+</html>

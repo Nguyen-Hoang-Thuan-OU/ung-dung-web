@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 25</title>
+	
+</head>
+
+<body>
+	<p id="mang"></p>
+	<p id="sort"></p>
+	
+<script>
+		var a = "";
+		var arr = new Array();
+		var left = 0, right = 9;
+		for(i = 0; i < 10; i++)
+			{
+				var x = Math.floor(Math.random()*100)%20 + 1;
+				a += x + " ";
+				if(x % 2 == 0)
+					arr[left++] = x;
+				else
+					arr[right--] = x;
+			}
+		var kq = arr.join();
+		document.getElementById("mang").innerHTML = "10 số nguyên ngẫu nhiên <= 20:  " + a;
+		document.getElementById("sort").innerHTML = "Kết quả sau khi sắp xếp (Chẵn bên trái, lẻ bên phải): " + kq;
+	</script>
+</body>
+</html>

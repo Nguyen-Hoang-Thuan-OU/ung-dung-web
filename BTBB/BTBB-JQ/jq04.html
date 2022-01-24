@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 04</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+	
+<body>
+	<p>Tạo hiệu ứng <span class="nhapNhay">Chữ nhấp nháy</span> với phương thức fadeIn, fadeOut</p>
+	
+	<script>
+		function nhapNhay()
+		{
+			$(".nhapNhay").fadeOut(1000, function()
+			{
+				$(".nhapNhay").fadeIn(1000, nhapNhay());
+			}
+		);
+		}
+		nhapNhay();
+	</script>
+</body>
+</html>

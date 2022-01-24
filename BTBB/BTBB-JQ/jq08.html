@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 08</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>BẤM CHUỘT TRÁI HOẶC PHẢI</h1>
+	<p></p>
+
+	<script>
+		$(document).ready(function()
+		{
+			$("h1").click(function()
+			{
+				$("p").prepend("Bạn vừa bấm chuột trái<br>")
+				$("p").css("color", "darkblue");
+			}
+			)
+			
+			$("h1").contextmenu(function()
+			{
+				$("p").prepend("Bạn vừa bấm chuột phải<br>")
+				$("p").css("color", "darkgreen");
+			}
+			)
+		});
+	</script>
+</body>
+</html>

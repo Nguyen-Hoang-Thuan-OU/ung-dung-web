@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 14</title>
+	
+	<script>
+		function daoChuoi(chuoi)
+		{
+			var str = document.getElementById("chuoi").value;
+			var n = str.length;
+			var i;
+			var arr = str.split("");
+			arr = arr.reverse();
+			var kq = "";
+			for(i = 0; i < n; i++)
+				kq = kq + arr[i];
+			document.getElementById("ketQua").innerHTML= "Chuỗi sau khi hoán vị: " + kq;
+		}
+	</script>
+</head>
+
+<body>
+	<h2>ĐẢO NGƯỢC CHUỖI</h2>
+	<p>Nhập chuỗi:
+		<input type="text" id="chuoi">
+	</p>
+	
+	<button onClick="daoChuoi(chuoi)">Hoán vị</button>
+	
+	<p id="ketQua"></p>
+</body>
+</html>

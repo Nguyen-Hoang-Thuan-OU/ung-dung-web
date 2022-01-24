@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 06</title>
+	
+	<script>
+		function random100()
+		{
+			document.write("<br>Kết quả random 10 số nguyên từ 1 -> 100:   ");
+			var i, a, b, max , min = 100;
+			for(i = 0; i < 10; i++)
+			{
+				a = Math.floor(Math.random()*100)%99 + 1;
+				b = 100 - a;
+				if(b < min)
+				{
+					min = b;
+					max = a;
+				}
+				document.write(a + "  ");
+			}
+			document.writeln();
+			document.writeln("Trong đó, số gần với 100 nhất là: " + max);
+		}
+	</script>
+</head>
+
+<body>
+	<pre>
+	<script>
+		document.getElementsByTagName("pre").innerHTML=random100();
+	</script>
+	</pre>
+</body>
+</html>

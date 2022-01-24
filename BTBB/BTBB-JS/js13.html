@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 13</title>
+	
+	<script>
+		function upper_lower(chuoi)
+		{
+			var str = document.getElementById("chuoi").value;
+			var kq;
+			if(str.length >= 3)
+				{
+					var left = str.substr(0, 3);
+					left = left.toLowerCase();
+					kq = left + str.substr(3);
+				}
+			else
+				kq = str.toUpperCase();
+			document.getElementById("ketQua").innerHTML= kq;
+					
+		}
+	</script>
+</head>
+
+<body>
+	<p>Nhập chuỗi: 
+		<input type="text" id="chuoi">
+	</p>
+	
+	<button onClick="upper_lower(chuoi)">Thực hiện</button>
+	
+	<p id="ketQua"></p>
+</body>
+</html>

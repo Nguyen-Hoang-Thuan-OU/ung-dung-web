@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 15</title>
+	
+	<script>
+		function maHoa(chuoi)
+		{
+			var str=document.getElementById("chuoi").value;
+			var kq="";
+			for(i = 0; i < str.length; i++)
+				{
+					var ascii = str.charCodeAt(i) + 1;
+					if(ascii == 58)
+						kq += 0;
+					else if(ascii == 91)
+						kq += "A";
+					else if(ascii == 123)
+						kq += "a";
+					else 
+						kq += String.fromCharCode(ascii);		
+				}
+			document.getElementById("ketQua").innerHTML= "Chuỗi sau khi mã hóa: " + kq;
+		}
+	</script>
+</head>
+
+<body>
+	<h2>MÃ HÓA CHUỖI</h2>
+	<p>Nhập chuỗi: 
+		<input type="text" id="chuoi">
+	</p>
+	
+	<button onClick="maHoa(chuoi)">Thực hiện</button>
+	
+	<p id="ketQua"></p>
+</body>
+</html>

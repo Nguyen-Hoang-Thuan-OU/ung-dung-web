@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 13</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<img src="/Images/bt07.png" />
+	
+	<br />
+	
+	<button id="lamMo">Làm mờ</button>
+	
+	<script>
+		$("#lamMo").click(function()
+		{
+			$("img").fadeTo(500,0.5);
+		}
+		);
+	</script>
+</body>
+</html>

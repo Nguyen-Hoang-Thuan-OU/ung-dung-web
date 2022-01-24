@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JQ 10</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+	
+<body>
+	<div>CHƯƠNG TRÌNH XÓA PHẦN TỬ &lt;P&gt;</div>
+	
+	<p>Đây là &lt;p&gt; thứ nhất</p>
+	<p>Đây là &lt;p&gt; thứ hai</p>
+	<p>Đây là &lt;p&gt; thứ ba</p>
+	
+	<div></div>
+	
+	<button id="xoa">Xóa phần tử &lt;p&gt;</button>
+	
+	<script>
+  		$("#xoa").click(function()
+		{
+			$("p").empty();
+		}
+		);
+	</script>
+</body>
+</html>

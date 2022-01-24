@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS 24</title>
+</head>
+
+<body>
+	<p id="mang"></p>
+	<p id="sapXep"></p>
+	
+	<script>
+		function compare(a, b)
+		{
+			return b - a;
+		}
+		var a = "";
+		var arr = new Array();
+		for(i = 0; i < 10; i++)
+			{
+				var x = Math.floor(Math.random()*100)%20 + 1;
+				a += x + " ";
+				arr[i] = x;
+			}
+		
+		arr = arr.sort(compare);
+		var kq=arr.join();
+		document.getElementById("mang").innerHTML = "10 số nguyên ngẫu nhiên <= 20:  " + a;
+		document.getElementById("sapXep").innerHTML = "Kết quả sau khi sắp xếp các số giảm dần: " + kq;
+	</script>
+</body>
+</html>
