@@ -1,0 +1,329 @@
+[TỔNG QUAN]
+
+Nếu xem việc xây dựng một website giống như việc xây dựng một ngôi nhà.
+
+	[NGÔI NHÀ]					[WEBSITE]
+
+	Phần khung, nền				HTML
+	Hệ thống điện, nước...				JavaScript
+	Trang trí nội thất và ngoại thất		CSS
+
+==========================================================================================
+
+[CẤU TRÚC CỦA HTML HTML]
+
+HTML .
+
+	- Mặc dù chứa cụm từ "ngôn ngữ", nhưng đây lại không phải là ngôn ngữ lập trình (giống như JavaScript, Java, C#...), ta không thể làm quá nhiều xử lý về logic mà không cần sử dụng đến một ngôn ngữ lập trình thực sự.
+
+	- Cho phép cấu trúc văn bản và những thành phần khác mà ta dự định sẽ đưa lên trang web.
+
+	- Không phân biệt hoa thường.
+		Ví dụ: <div> = <Div = <dIv> = <diV> = <DIV>...
+
+	- Những khoảng trắng ở giữa các cặp thẻ cũng không có tác dụng giãn cách / xống dòng.
+
+		Ví dụ:
+			<p>abc</p>
+			<p>xyz</p>
+
+			=
+
+			<p>abc</p> <!-- Khoảng trắng ở đây không có tác dụng --> <p>xyz</p>
+
+--------------------------------------------------------------------------------
+
+HTML Document là "mái nhà chung" cho toàn bộ tab trình duyệt, nó tuân theo một cấu trúc, mỗi thẻ (tag) sẽ giúp định nghĩa nên Document.
+
+--------------------------------------------------------------------------------
+
+<!DOCTYPE html>: báo cho trình duyệt biết đây là HTML document
+
+<html lang="en">: cho các công cụ tìm kiếm và trình duyệt biết trang web được viết bằng ngôn ngữ gì.
+	| https://www.w3schools.com/tags/ref_country_codes.asp
+
+<meta>: giúp xác định thông tin hữu ích cho trình duyệt và công cụ tìm kiếm sử dụng khi xem trang web.
+
+<meta charset="utf-8" />: để hiển thị trang HTML một cách chính xác, phải biết bộ mã kí tự (character set) được sử dụng trong trang.
+
+<html></html>: bộ chứa HTML
+
+<head></head>: lưu trữ tất cả siêu dữ liệu về trang web.
+
+<body>: nơi đại diện toàn bộ nội dung của HTML Document, cũng như những gì sẽ được hiển thị trên trang web.
+
+<title></title>: tiêu đề của tab trình duyệt (tên của tab).
+
+<link>: cho phép kết nối đến biểu định kiểu CSS (CSS stylesheet / CSS Document).
+
+<script>: cho phép bạn kết nối JavaScript với HTML để cung cấp chức năng.
+
+==========================================================================================
+
+[THẺ - TAG]
+
+	* Phần tử (Element): chứa bên trong một thẻ (tag) và có thể chứa thêm các thuộc tính (attribute), sự kiện (event)...
+	* Thẻ (Tag): sử dụng một từ viết tắt (ví dụ: p, h1, img...) để đại diện và cho biết phần tử (element) thuộc dạng gì.
+
+Thẻ mở: có một hoặc nhiều thuộc tính (attribute) dành riêng cho phần tử.
+
+--------------------------------------------------------------------------------
+
+[CÁC DẠNG THẺ]
+
+Có rất nhiều cách chia khác nhau, một trong những cách là:
+
+------------------------------------------------------------
+
+	1. Thẻ "Uyên ương" (Normal): có thẻ đóng và thẻ mở để tạo thành một cặp thẻ, nội dung sẽ được viết ở giữa cặp thẻ này để tạo thành một phần tử (element).
+
+		Ví dụ:
+			<p></p>
+			<h1></h1>
+			<div></div>
+			<span></span>
+			<strong></strong>
+			...
+
+		- Với cặp thẻ đóng và mở, ta có thể làm được nhiều thứ, chẳng hạn như nhúng thêm một hoặc nhiều thẻ khác vào bên trong cặp thẻ này.
+
+		- Mặc dù cho phép, nhưng có một số cặp thẻ (ví dụ: <p>) không khuyến khích có thêm những thẻ khác được nhúng vào bên trong.
+
+----------------------------------------
+
+		1.1. Thẻ "hướng ngoại": bên trong hoàn toàn được phép chứa nhiều thẻ khác.
+
+			Ví dụ: div, table, ol, ul, body...
+
+----------------------------------------
+
+		1.2. Thẻ "hướng nội": bên trong không nên những vẫn được phép chứa nhiều thẻ khác.
+
+			Ví dụ: h1, h2, h3, h4, h5, h6, p, strong...
+
+------------------------------------------------------------
+
+	2. Thẻ "Cô đơn" (Self closing): khi thẻ đóng và thẻ mở hoà lại thành một, tất cả mọi thứ cần thiết muốn trình bày đều nằm trong cặp dấu <.../>.
+
+		Ví dụ:
+			<img />
+			<input />
+			<meta />
+			<link />
+			... 
+
+		- Không thể chèn thêm những thẻ khác vào bên trong dấu <.../>
+
+==========================================================================================
+
+[THUỘC TÍNH - HTML ATTRIBUTE]
+
+Là những thuộc tính nằm trong / được lồng vào bên trong thẻ mở.
+
+	Ví dụ: những thuộc tính thường gặp
+		id: định danh duy nhất của phần tử.
+		class: giúp định danh phần tử hoặc một nhóm các phần tử, thường có liên quan đến CSS.
+		src: đưa URL muốn hiển thị (ví dụ: hình ảnh...).
+
+--------------------------------------------------------------------------------
+
+[CÁC DẠNG THUỘC TÍNH]
+
+Có hai dạng thuộc tính:
+
+	1. Global attribute: mọi phần tử HTML đều có thể thấy.
+		Ví dụ: thuộc tính class thì tất cả các thẻ (ví dụ: p, img...) đều có thể thấy và sử dụng được.
+
+	2. Element specific attribute: một số thẻ (ví dụ: p, div, img...) sẽ có những thuộc tính để định dạng cho mình và chỉ có tác dụng trong thẻ. Khi sử dụng ở những thẻ không phù hợp, tuy không hiển thị thông báo lỗi, nhưng cũng sẽ không có tác dụng gì.
+		Ví dụ: thuộc tính src và width có tác dụng trong thẻ <img>,
+			nhưng nếu đem đi sử dụng trong thẻ <p> thì sẽ không có tác dụng
+
+==========================================================================================
+
+[NỘI DUNG - CONTENT / TEXT]
+
+Nội dung xuất hiện giữa những cặp thẻ (tag).
+
+Nếu viết ở bên ngoài cặp thẻ <body> thì vẫn được tính là nội dung, nhưng không khuyến khích, vì viết như vậy sẽ vi phạm quy chuẩn của HTML.
+
+==========================================================================================
+
+[TỔNG KẾT]
+
+	// Định dạng HTML
+	/*
+	 * <input class="text form-control"
+	 *		  id="txtEmail"
+	 *		  name="txtEmail"
+	 *		  placeholder="Địa chỉ email"
+	 *		  type="email"
+	 *		  value="">
+	 * */
+		
+	/*
+	 * 1. Dấu mở: < hoặc <>
+	 * 2. Tên thẻ (tag name): html, body, head, input, div, form, label, span...
+	 * 3. Thuộc tính (attribute name): class, id, name, placeholder, type, value...
+	 * 4. Giá trị của thuộc tính (attribute value): "text form-control", "txtEmail"...
+	 * 5. Dấu đóng: > hoặc </>
+	 * */
+
+==========================================================================================
+==========================================================================================
+==========================================================================================
+
+[MÔ HÌNH ĐỐI TƯỢNG TÀI LIỆU - DOCUMENT OBJECT MODEL]
+[HTML DOM]
+
+--------------------------------------------------------------------------------
+
+[TRÌNH DUYỆT]
+
+	* Tag: thẻ / nhãn chứa nhiều thông tin, giúp phân loại.
+	* Tab: khoảng cách kéo dài từ nơi này đến nơi khác.
+
+* Các thành phần của trình duyệt:
+
+	- Navigator: đại diện cho trạng thái và định danh của trình duyệt, là đối tượng lưu trữ tất cả các thông tin và thông số của trình duyệt, ví dụ: tên trình duyệt, phiên bản, hệ điều hành, ngôn ngữ hỗ trợ, có bật cookie hay không...
+
+	- Window: cửa sổ trình duyệt sẽ là nơi mà trang web được nạp, giúp kiểm soát các thẻ (tab) đang được mở. Mỗi cửa sổ / thẻ sẽ có một DOM và môi trường JavaScript riêng biệt; các Global Object và Variable sẽ được tạo mới mỗi khi mởi một cửa sổ / thẻ mới, nhưng Cookies và Session thì vẫn sẽ được giữ.
+
+	- Document: đây là nơi trang web (HTML, CSS và JavaScript) sẽ được nạp, "đại diện" cho mã nguồn gốc nhưng đã được nạp vào trình duyệt. Đây là nơi mà trình duyệt sẽ lưu DOM dưới dạng biến, vì vậy, để truy cập được các thuộc tính trong trang web thì ta luôn luôn phải đi qua document.
+
+		+ Mỗi thẻ (Tag) trong Document được gọi là nút / đốt (node data type - generic data type) - kiểu dữ liệu chung cho mọi đối tượng tồn tại trong Document.
+		+ Phần tử (Element): là kiểu dữ liệu cho biết đây là loại node gì, cung cấp các thông tin về phần tử HTML.
+		+ Danh sách node (NodeList): là kiểu dữ liệu trả về nhiều hơn một phần tử khi được truy vấn.
+		+ Thuộc tính (Attribute): là kiểu dữ liệu thuộc tính, có tên và giá trị.
+
+		* Re-presentation (Đại diện / Thay mặt): sử dụng thứ này để biểu diễn một thứ khác.
+			Ví dụ:
+				- Đại diện cho nhà trai phát biểu.
+				- Đại diện cho anh em bè bạn đến chúc mừng.
+				- Xem Waifu như mỹ nhân.
+
+		* Presentation (Thuyết minh / Trình bày): truyền đạt trực tiếp thông tin.
+			Ví dụ:
+				- Hoa hồng đỏ có thể tượng trưng cho tình yêu.
+				- Chim bồ câu là biểu tượng của hòa bình.
+				- Miêu tả về mỹ nhân.
+
+* Duyệt web / Lướt web (Web Surfing / Web Browsing): khi ghé thăm một website thông qua URL, trình duyệt sẽ gửi một yêu cầu (request) đến Web Server - nơi website đang được lưu trữ, sau khi tải trang HTML (cây DOM) từ máy chủ xuống, trình duyệt sẽ biên dịch mã và hiển thị nội dung trang web ra cho người dùng. Nếu trang web đã nằm trong máy tính nghĩa là đã được nạp vào RAM.
+		-> Tải trang web (và tài nguyên) về máy tính.
+
+--------------------------------------------------------------------------------
+
+[ĐỊNH NGHĨA VỀ HTML DOM]
+
+Ví dụ:
+	Khi sử dụng TV, ta sẽ luôn có nhu cầu chuyển kênh hoặc tăng / giảm âm lượng.
+		-> Điều khiển từ xa đóng vai trò câu nối: kết nối giữa TV và người dùng.
+
+	Trong trang web, ta cũng luôn có nhu cầu muốn trang web được linh hoạt hơn.
+		-> JavaScript đóng vai trò như cầu nối: kết nối giữa trang HTML và người dùng.
+
+------------------------------------------------------------
+
+	Mô hình (Model) = Đại diện (Represent)
+
+* Mô hình các đối tượng tài liệu HTML (Document Object Model - DOM): là một chuẩn được định nghĩa bởi W3C. Tài liệu sẽ được thể hiện dưới dạng đối tượng.
+
+	- Khi URL được nhập vào thanh địa chỉ và toàn bộ nội dung của một trang web được trả về chỉ đơn giản là chuỗi HTML. Lúc này, dựa theo những quy chuẩn do W3C là quy định từ trước và những gì đã được nhà sản xuất cài đặt sẵn mà trình duyệt sẽ chuyển chuỗi này thành mô hình DOM.
+
+	- Trình duyệt sẽ phân tích cú pháp (parse) thành cây DOM - một cấu trúc dạng cây với node cao nhất là HTML, sau đó đến head và body. CSS cũng sẽ được phân tích cú pháp (parse) để cho ra được cây CSSOM. Cây DOM và cây CSSOM sẽ được hợp nhất thành cây Render và sau đó vẽ (paint) lại cây này lên trình duyệt.
+
+	- Mỗi thành phần trong cây DOM sẽ được gọi là nhánh / cành / nút / đốt / điểm giao nhau (node). Đây không phải là thuật ngữ của HTML DOM.
+
+	- Đây là mô hình do trình duyệt xây dụng, có ý nghĩa trong nội bộ trình duyệt và có thể có đôi chút khác biệt ở một số trình duyệt trong cách xây dựng DOM.
+
+	- Là đối tượng "đại diện" cho trang web (HTML) đã được nạp vào trong trình duyệt - "đại diện" cho toàn bộ những phần tử (element) đã tạo nên trang web.
+
+	- Vì là đối tượng nên sẽ cung cấp các thuộc tính và phương thức cho phép lập trình viên tìm kiếm và tương tác trên đối tượng này (thông qua JavaScript).
+
+	- Mục đích của DOM được tạo ra là để các lập trình viên có thể thao tác trên trang web bằng JavaScript.
+
+	- Là API được sử dụng để truy cập vào các phần tử HTML. Nếu API cho phép lập trình viên sử dụng mà không cần biết đến cấu trúc phức tạp bên trong của thứ mà họ đang sử dụng, thì API trong HTML cho phép thao tác với HTML mà không cần biết đến cách HTML được hiển thị trên trình duyệt. Ta chỉ việc viết HTML và sử dụng API (DOM).
+
+	- Là một nền tảng và API của trình duyệt cho phép các chương trình truy cập và tự động cập nhật nội dung của HTML Document.
+
+	- DOM được dùng để truy xuất / truy cập và thao tác trên Document có cấu trúc dạng HTML hay XML, có thể được viết bằng các ngôn ngữ lập trình thông dụng như Javascript, PHP... và cũng có thể được thực thi trên nhiều hệ điều hành khác nhau.
+
+	- Giữa các node có mối quan hệ cha, con và anh em.
+
+	-> Là cấu trúc dạng cây và mỗi nhánh / cành / nút (node) trên cây đại diện 1 phần tử (ví dụ: thẻ <p>, <a>, <href>...).
+
+----------------------------------------
+
+Để tương tác được với một phần tử, ta cần hai bước:
+	1. Xác định được phần tử HTML.
+	2. Xác định hành động muốn thực hiện trên phần tử đó bằng JavaScript.
+
+----------------------------------------
+
+HTML giống như một tấm bản đồ đã được in sẵn ra giấy, ta chỉ có thể dùng bút để vẽ lên chứ không thể nào thực hiện thêm những thao tác khác.
+	Ví dụ:
+		- Phóng to bản đồ.
+		- Tìm đến những nơi không hiển thị trên bản đồ.
+		- ...
+
+Nhưng API (DOM) lại giống như bản đồ của Google, khi tại đây, ta có thể thực hiện được rất nhiều tính năng trên đây.
+	Ví dụ:
+		- Xem chi tiết đường phố.
+		- Xem tình trạng giao thông theo thời gian thực.
+		- Tra cứu các tuyến đường khác nhau dành riêng cho các loại phương tiện di chuyển khác nhau.
+		- ...
+
+--------------------------------------------------------------------------------
+
+[CÁC THÀNH PHẦN TRONG HTML DOM]
+
+Có ba thành phần trong HTML DOM:
+
+	1. Element
+
+	2. Attribute
+
+	3. Text
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
